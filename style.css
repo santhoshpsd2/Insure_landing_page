@@ -1,0 +1,497 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+
+:root {
+  --dm-serif-font-400: "DM Serif Display", serif;
+  --karla-font-400-700: "Karla", sans-serif;
+  --dark-viiolet: hsl(256, 26%, 20%);
+  --grayish-blue: hsl(216, 30%, 68%);
+  --very-dark-violet: hsl(270, 9%, 17%);
+  --dark-greyish-violet: hsl(273, 4%, 51%);
+  --very-light-grey: hsl(0, 0%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+.close_icon {
+  display: none;
+}
+
+.close_icon.active {
+  display: block;
+}
+
+.hamburger_icon.active {
+  display: none;
+}
+
+.intro_desktop {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.3rem;
+}
+
+nav {
+  display: none;
+}
+
+.logo {
+  height: 20px;
+}
+
+.ham_close_div {
+  cursor: pointer;
+}
+
+.main-top-image-div {
+  position: relative;
+}
+
+.images_div {
+  display: flex;
+  background-color: var(--grayish-blue);
+  justify-content: center;
+}
+
+.mobile-menu {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background: url(./images/bg-pattern-mobile-nav.svg);
+  background-position: left 0 top 300px;
+  background-repeat: no-repeat;
+  background-color: var(--dark-viiolet);
+}
+
+.mobile-menu.active {
+  visibility: visible;
+}
+
+.mobile-menu ul {
+  list-style: none;
+}
+
+.mobile-menu ul li {
+  text-align: center;
+}
+
+.mobile-menu ul li a:focus {
+  border: 2px solid white;
+}
+
+.mobile-menu ul a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: var(--karla-font-400-700);
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+  min-width: 100%;
+  display: inline-block;
+  padding: 1rem;
+}
+
+.human_insurance {
+  background: url(./images/bg-pattern-intro-left-mobile.svg),
+    url(./images/bg-pattern-intro-right-mobile.svg),
+    linear-gradient(0deg, #fff 25%, hsl(256, 26%, 20%) 25%);
+  background-repeat: no-repeat;
+  background-size: 50%, 35%, 100%;
+  background-position: left 0 top 0, right 0px bottom 0;
+  color: white;
+  text-align: center;
+  padding: 6rem 1.5rem 3rem;
+}
+
+.human_insurance h1 {
+  font-family: var(--dm-serif-font-400);
+  font-weight: 400;
+  font-size: 2.8rem;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.human_insurance p {
+  font-family: var(--karla-font-400-700);
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+  color: hsl(216, 66%, 84%);
+}
+
+.plans {
+  color: hsl(216, 66%, 84%);
+  background-color: inherit;
+  border: 1px solid white;
+  padding: 0.5rem 2rem;
+  font-family: var(--karla-font-400-700);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-bottom: 16rem;
+}
+
+.main-top-line {
+  border: none;
+  height: 2px;
+  width: 50%;
+  margin: 0 auto;
+  background-color: hsl(216, 22%, 86%);
+}
+
+.main-bottom {
+  text-align: center;
+  padding-inline: 1.5rem;
+}
+
+.main-bottom > h2 {
+  font-family: var(--dm-serif-font-400);
+  font-weight: 400;
+  font-size: 2.7rem;
+  margin-bottom: 4rem;
+}
+
+.main-bottom-card-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+  margin-bottom: 6rem;
+}
+
+.main-bottom-card h3 {
+  font-family: var(--dm-serif-font-400);
+  font-size: 1.65rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.main-bottom-card p {
+  font-family: var(--karla-font-400-700);
+  font-weight: 400;
+  color: var(--dark-greyish-violet);
+  font-size: 1.01rem;
+  line-height: 1.5rem;
+}
+
+.main-bottom-work-div {
+  padding: 5rem 1.5rem;
+  background: url(./images/bg-pattern-how-we-work-mobile.svg);
+  background-repeat: no-repeat;
+  background-color: var(--dark-viiolet);
+  background-position: top 0 right 0;
+}
+
+.main-bottom-work-div h2 {
+  color: #fff;
+  font-family: var(--dm-serif-font-400);
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  line-height: 2.4rem;
+}
+
+.work {
+  cursor: pointer;
+  color: #fff;
+  border: 2px solid var(--grayish-blue);
+  font-family: var(--karla-font-400-700);
+  font-weight: 700;
+  padding: 0.5rem 1.2rem;
+  background-color: inherit;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+}
+
+footer {
+  background: url(./images/bg-pattern-footer-mobile.svg);
+  background-position: left 0 top 0;
+  background-repeat: no-repeat;
+  background-color: var(--very-light-grey);
+  margin-top: 8rem;
+  text-align: center;
+  padding: 6rem 1.5rem;
+}
+
+.footer-images-div {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 0;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.footer_line {
+  border: none;
+  background-color: hsl(216, 22%, 86%);
+  height: 2px;
+  margin-bottom: 2rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.footer-links-div {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer a {
+  text-decoration: none;
+  font-family: var(--karla-font-400-700);
+  font-weight: 700;
+  color: var(--very-dark-violet);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer li + li {
+  margin-top: 0.75rem;
+}
+
+footer ul li:first-child {
+  margin-bottom: 1.5rem;
+  font-family: var(--karla-font-400-700);
+  font-weight: 700;
+  color: var(--dark-greyish-violet);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 1200px) {
+  .ham_close_div {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .intro_mobile {
+    display: none;
+  }
+
+  .intro_desktop {
+    display: block;
+  }
+
+  header {
+    padding: 1rem 8rem;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--dark-greyish-violet);
+    text-transform: uppercase;
+    font-family: var(--karla-font-400-700);
+    font-weight: 700;
+    display: inline-block;
+    letter-spacing: 0.1rem;
+    padding: 0.4rem 0rem;
+    border: 2px solid #fff;
+  }
+
+  nav ul li a:hover {
+    color: var(--dark-viiolet);
+  }
+
+  nav ul li a:focus {
+    color: var(--grayish-blue);
+    background-color: var(--very-dark-violet);
+    border: 2px solid var(--dark-viiolet);
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    padding: 0.4rem 2rem;
+  }
+
+  .main-top-line {
+    display: none;
+  }
+
+  .images_div {
+    background: initial;
+  }
+
+  .main-top {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1.5rem;
+    padding: 8rem 51vw 15rem 13.8vw;
+    background: url(./images/bg-pattern-intro-left-desktop.svg),
+      url(./images/bg-pattern-intro-right-desktop.svg),
+      url(./images/image-intro-desktop.jpg),
+      linear-gradient(0deg, #fff 35%, hsl(256, 26%, 20%) 35%);
+    background-repeat: no-repeat;
+    background-position: left 0 bottom 0, top 0 right 0, top 128px right 13.8vw;
+    position: relative;
+  }
+
+  .main-top::after {
+    content: "";
+    position: absolute;
+    left: 13.8vw;
+    bottom: 0;
+    height: 2px;
+    width: 100px;
+    background-color: var(--grayish-blue);
+  }
+
+  .human_insurance {
+    background: initial;
+    text-align: left;
+    padding: 10rem 0 0;
+    position: relative;
+  }
+
+  .human_insurance::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 2px;
+    width: 100px;
+    background-color: var(--grayish-blue);
+  }
+
+  .human_insurance h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .human_insurance p {
+    font-size: 0.88rem;
+  }
+
+  .plans {
+    padding: 0.6rem 1.6rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.07rem;
+  }
+
+  .plans:hover {
+    background-color: #fff;
+    color: var(--dark-viiolet);
+  }
+
+  .main-bottom {
+    padding: 3rem 13.8vw 7rem;
+    text-align: left;
+  }
+
+  .main-bottom > h2 {
+    font-size: 3.5rem;
+  }
+
+  .main-bottom-card-div {
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-bottom: 8rem;
+  }
+
+  .main-bottom-card-div > * {
+    flex: 1;
+  }
+
+  .main-bottom-card h3 {
+    font-size: 2rem;
+  }
+
+  .main-bottom-card p {
+    font-size: 0.95rem;
+  }
+
+  .main-bottom-work-div {
+    padding: 5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 23vw;
+    background: url(./images/bg-pattern-how-we-work-desktop.svg);
+    background-position: top 0 right 0;
+    background-repeat: no-repeat;
+    background-color: var(--dark-viiolet);
+  }
+
+  .main-bottom-work-div h2 {
+    font-size: 3rem;
+    margin-bottom: initial;
+    line-height: 3rem;
+  }
+
+  .main-bottom-work-div > .work-div {
+    flex-shrink: 0;
+  }
+
+  .work:hover {
+    border: none;
+    background: white;
+    color: var(--dark-viiolet);
+  }
+
+  footer {
+    margin-top: initial;
+    background: url(./images/bg-pattern-footer-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top 0 left 0;
+    background-color: var(--very-light-grey);
+    padding: 4rem 13.8vw;
+    text-align: left;
+  }
+
+  .social-links svg:hover > path {
+    fill: var(--dark-viiolet);
+  }
+
+  .footer-images-div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-links-div {
+    flex-direction: row;
+  }
+
+  .footer-links-div > * {
+    flex: 1;
+  }
+}
